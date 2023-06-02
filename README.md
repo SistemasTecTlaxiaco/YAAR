@@ -1,4 +1,4 @@
-# YAAR (Y akuin) :iphone: 🤖
+# YAAR (Yakuin Realidad Aumenta) :iphone: 🤖 <')))~
 Debido a la gran demanda tecnológica actual y al creciente interés de muchas empresas por la inclusión de diversas tecnologías para presentar sus productos, la Realidad Aumentada (RA) se posiciona como una gran herramienta que permite aumentar un espacio físico según las características deseada. Los medios basados en imágenes presentan limitaciones a nivel de interacción e inmersión ya que el usuario solo puede ver el proyecto establecido sin modificar parámetros que le permitan sentirse a gusto con el espacio arquitectónico de su interés. Es por ello que al aplicar esta tecnologia podemos encontrar diversos campos en donde se pueden ejecutar, así creando una mejor interacción con los usuaiors.
 # OBJETIVO DEL PROYECTO :checkered_flag:
 Desarrollar un prototipo de aplicación interactiva basada en realidad aumentada para el uso de los jovenes que esten interesados en la información de la institución, dando así difusión de las carreras con las que se cuenta.
