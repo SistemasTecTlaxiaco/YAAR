@@ -66,7 +66,7 @@
           window.location.href = "https://www.tlaxiaco.tecnm.mx/";
         }
         if (currentTab === 'git') {
-          window.location.href = "https://github.com/SistemasTecTlaxiaco/Octacat-AR";
+          window.location.href = "https://github.com/SistemasTecTlaxiaco/YAAR";
         }
       });
     }
@@ -77,7 +77,7 @@
       const portfolioRightButton = document.querySelector("#portfolio-right-button");
       const paintandquestPreviewButton = document.querySelector("#paintandquest-preview-button");
       const objeto = document.querySelector("#Modelo3D")
-      objeto.setAttribute("visible",false);
+      objeto.setAttribute("visible", false);
       let y = 0;
       let currentItem = 0;
 
@@ -92,15 +92,14 @@
         y += 0.008;
         if (y >= 0.6) {
           clearInterval(id);
-          portfolioLeftButton.setAttribute("visible", true);
-          portfolioRightButton.setAttribute("visible", true);
+          portfolioLeftButton.setAttribute("visible", false);
+          portfolioRightButton.setAttribute("visible", false);
           portfolioLeftButton.addEventListener('click', () => {
             currentItem = (currentItem + 1) % 3;
             showPortfolioItem(currentItem);
           });
           portfolioRightButton.addEventListener('click', () => {
-            currentItem = (currentItem - 1 + 3) % 3;
-            showPortfolioItem(currentItem);
+            
           });
 
           paintandquestPreviewButton.addEventListener('click', () => {
@@ -328,13 +327,22 @@
           <polyline class="right1" points="40,-40 50,-50 -40,-50 -50,-40 -50,50 -40,40" stroke="white" stroke-width=20
             fill="none" />
         </g>
-        <text y=-140 text-anchor="middle" font-weight="bold" font-size="3em" font-family="Bebas Neue">Cargando componetes...</text>
+        <text y=-140 text-anchor="middle" font-weight="bold" font-size="3em" font-family="Bebas Neue">Cargando
+          componetes...</text>
       </g>
-      <g transform="translate(435,435) scale(5 5)"><g xmlns="http://www.w3.org/2000/svg" fill="#212121" stroke-width=20>
-        <path  d="m12.29 21.499c3.73 0 8.94.09 10.835-3.701.715-1.449.875-3.122.875-4.7h-.001c0-2.073-.575-4.047-1.95-5.651.786-2.363.26-3.756-.345-4.948-2.24 0-3.69.42-5.39 1.742-2.746-.653-5.856-.571-8.455.04-1.725-1.336-3.175-1.781-5.44-1.781-.621 1.237-1.136 2.599-.344 4.977-2.676 3.083-2.466 7.566-1.065 10.322 1.97 3.835 7.49 3.7 11.28 3.7zm-5.289-9.99c.95 0 1.865.168 2.8.297 3.418.52 5.215-.297 7.31-.297 2.339 0 3.675 1.915 3.675 4.087 0 4.349-4.015 5.012-7.53 5.012-2.419-.163-9.93.976-9.93-5.012 0-2.172 1.334-4.087 3.675-4.087z" fill="#ffffff" data-original="#212121"/>
-        <path d="m16.655 18.323c1.29 0 1.835-1.692 1.835-2.727s-.545-2.727-1.835-2.727-1.835 1.692-1.835 2.727.545 2.727 1.835 2.727z" fill="#ffffff" data-original="#212121"/>
-        <path d="m7.47 18.323c1.29 0 1.835-1.692 1.835-2.727s-.546-2.726-1.835-2.726-1.835 1.692-1.835 2.727.545 2.726 1.835 2.726z" fill="#ffffff" data-original="#212121"/>
-      </g></g>
+      <g transform="translate(435,435) scale(5 5)">
+        <g xmlns="http://www.w3.org/2000/svg" fill="#212121" stroke-width=20>
+          <path
+            d="m12.29 21.499c3.73 0 8.94.09 10.835-3.701.715-1.449.875-3.122.875-4.7h-.001c0-2.073-.575-4.047-1.95-5.651.786-2.363.26-3.756-.345-4.948-2.24 0-3.69.42-5.39 1.742-2.746-.653-5.856-.571-8.455.04-1.725-1.336-3.175-1.781-5.44-1.781-.621 1.237-1.136 2.599-.344 4.977-2.676 3.083-2.466 7.566-1.065 10.322 1.97 3.835 7.49 3.7 11.28 3.7zm-5.289-9.99c.95 0 1.865.168 2.8.297 3.418.52 5.215-.297 7.31-.297 2.339 0 3.675 1.915 3.675 4.087 0 4.349-4.015 5.012-7.53 5.012-2.419-.163-9.93.976-9.93-5.012 0-2.172 1.334-4.087 3.675-4.087z"
+            fill="#ffffff" data-original="#212121" />
+          <path
+            d="m16.655 18.323c1.29 0 1.835-1.692 1.835-2.727s-.545-2.727-1.835-2.727-1.835 1.692-1.835 2.727.545 2.727 1.835 2.727z"
+            fill="#ffffff" data-original="#212121" />
+          <path
+            d="m7.47 18.323c1.29 0 1.835-1.692 1.835-2.727s-.546-2.726-1.835-2.726-1.835 1.692-1.835 2.727.545 2.726 1.835 2.726z"
+            fill="#ffffff" data-original="#212121" />
+        </g>
+      </g>
     </svg>
   </div>
   <div class="example-container">
@@ -358,15 +366,10 @@
         <img id="icon-play" src="Assets/icons/play.png" />
         <img id="icon-left" src="Assets/icons/left.png" />
         <img id="icon-right" src="Assets/icons/right.png" />
-      
-        <img id="paintandquest-preview" src="Assets/portfolio/preview.png" />
-        <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="Assets/portfolio/prev.mp4"></video>
-        <video id="paintandquest-video-webm" autoplay="false" loop="true" src="Assets/portfolio/prev.webm"></video>
-        <img id="coffeemachine-preview" src="Assets/portfolio/1.png" />
-        <img id="peak-preview" src="Assets/portfolio/2.png" />
 
-        <a-asset-item id="Modelo3D"
-          src="Assets/yakuin4.glb">
+        <img id="paintandquest-preview" src="Assets/portfolio/preview.png" />
+         
+        <a-asset-item id="Modelo3D" src="Assets/yakuin4.glb">
         </a-asset-item>
         <!-- a-asset-item id="iron" src="https://cdn.glitch.global/16b440ad-e892-4085-9aee-0cf4887d328f/iron.glb?v=1653086416853"></a-asset-item>
           <a-asset-item id="luna" src="https://cdn.glitch.global/16b440ad-e892-4085-9aee-0cf4887d328f/LUNA.glb?v=1653087819401"></a-asset-item -->
@@ -380,7 +383,7 @@
           <a-entity id="portfolio-item0">
             <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552"
               position="0 0 0"></a-video>
-            <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5"
+            <a-image id="paintandquest-preview-button"  src="#paintandquest-preview" alpha-test="0.5"
               position="0 0 0" height="0.552" width="1">
             </a-image>
           </a-entity>
@@ -400,8 +403,8 @@
             height="0.15" width="0.15"></a-image>
         </a-entity>
 
-        <a-image visible=false id="micro-button" class="clickable" src="#icon-micro" position="-0.62 -0.5 0" height="0.15"
-          width="0.15"
+        <a-image visible=false id="micro-button" class="clickable" src="#icon-micro" position="-0.62 -0.5 0"
+          height="0.15" width="0.15"
           animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-image>
 
@@ -424,7 +427,7 @@
           width="0.15"
           animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-image>
-        <a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.2 0.2 0.2" src="#Modelo3D"
+        <a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.75 0" scale="0.2 0.2 0.2" src="#Modelo3D"
           animation-mixer>
         </a-gltf-model>
         <a-text id="text" class="clickable"
@@ -449,7 +452,7 @@
     'gracias armadillo',
     'armadillo eso es todo por ahora',
     'armadillo preséntate',
-    'armadillo por que estas trsite' ,
+    'armadillo por que estas trsite',
     'armadillo vuelve',
     'armadillo muéstrame la luna',
     'armadillo Muéstrame la luna',
@@ -466,23 +469,23 @@
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
 
-  var diagnostic = document.querySelector('#text'); 
+  var diagnostic = document.querySelector('#text');
   var vozHTML = '';
   arreglovoz.forEach(function (v, i, a) {
     console.log(v, i);
 
   });
 
-  window.onload = function() {
-  function micro(){
- recognition.start();
- console.log('Estoy listo para escuchar.');
-}
-document.getElementById('micro-button').onclick = micro;
-}
+  window.onload = function () {
+    function micro() {
+      recognition.start();
+      console.log('Estoy listo para escuchar.');
+    }
+    document.getElementById('micro-button').onclick = micro;
+  }
 
   recognition.onresult = function (event) {
-    var voz = event.results[0][0].transcript;         
+    var voz = event.results[0][0].transcript;
     diagnostic.setAttribute("value", "Dijiste: " + voz + ".");
     bg = voz;
     var bg = document.querySelector('text');
@@ -521,7 +524,7 @@ document.getElementById('micro-button').onclick = micro;
       utterance.lang = 'es-MX'
       speechSynthesis.speak(utterance)
     }
-//uzias
+    //uzias
     if (voz === 'armadillo Preséntate.') {
       console.log("armadillo se esta presentando!");
       let utterance = new SpeechSynthesisUtterance('Hola, mi nombre es armadillo mascota , mi nombre e imagen hacen referencia a la estructura y las ramificaciones de mi cuerpo, es decir, la cabeza es mi rama principal y mis tentáculos las ramificaciones de ella, por lo que se asemeja a la estructura y funcionamiento de un repositorio de GitHub.')
@@ -534,7 +537,7 @@ document.getElementById('micro-button').onclick = micro;
       utterance.lang = 'es-MX'
       speechSynthesis.speak(utterance)
     }
-//imanol
+    //imanol
     if (voz === 'Armadillo dime un dato curioso.') {
       console.log("Hola, estas pregutando!");
       var datos = [
@@ -546,59 +549,22 @@ document.getElementById('micro-button').onclick = micro;
       utterance.lang = 'es-MX'
       speechSynthesis.speak(utterance)
     }
-//israel
+    //israel
     if (voz === 'armadillo ¿que es el tecnologico?' || voz === 'Armadillo, que es el el tecnológico.') {
       console.log("Hola, estas preguntando!");
       let utterance = new SpeechSynthesisUtterance('Es una institución de educación de nivel superior, encargado de  formar profesionales e investigadores aptos para generar y aplicar conocimientos y tecnologías, con actitud innovadora, emprendedores y creativos; con habilidades en el campo laboral, pensamiento crítico, sentido ético, colaborativos y competentes para contribuir al desarrollo nacional y regional.')
       utterance.lang = 'es-MX'
       speechSynthesis.speak(utterance)
     }
-    if (voz === 'armadillo que carreras hay' || voz ==="Armadillo. ¿Qué carreras hay?") {
+    if (voz === 'armadillo que carreras hay' || voz === "Armadillo. ¿Qué carreras hay?") {
       console.log("Hola, estas preguntando!");
       let utterance = new SpeechSynthesisUtterance('Ingeniería Civil, Ingeniería Industrial, Ingeniería Mecatrónica, Ingeniería en Sistemas Computacionales, Ingeniería en Gestión Empresarial, Licenciatura en Administración')
       utterance.lang = 'es-MX'
       speechSynthesis.speak(utterance)
     }
     //interaccion con RA         
+   
     
-
-  
-    if (voz === 'armadillo Haz que ironcat desaparezca' || voz === 'armadillo Haz que Iron Cat desaparezca') {
-      console.log("Estas queriendo a ironcat transparente");
-      var el = document.querySelector('#avatar');
-      el.setAttribute("visible", 'false');
-
-      let utterance = new SpeechSynthesisUtterance('Ironcat a desaparecido, a utilizado nanotecnologia y muchas librerias que ha econtrado en GitHub.')
-      utterance.lang = 'es-MX'
-      speechSynthesis.speak(utterance)
-    }
-
-    if (voz === 'armadillo regresa al escenario' || voz === 'armadillo regresa a la escena') {
-      console.log("Estas queriendo regresar a armadillo");
-      var el = document.querySelector('#avatar');
-      el.setAttribute("src", 'https://cdn.glitch.global/16b440ad-e892-4085-9aee-0cf4887d328f/yakuingit.glb?v=1648149096491');
-      el.setAttribute("scale", '0.1 0.1 0.1');
-      el.setAttribute("position", '0 -0.25 0');
-      el.setAttribute("rotation", '0 0 0');
-      el.setAttribute("visible", 'true');
-
-      let utterance = new SpeechSynthesisUtterance('Enseguida amigo. aunque ya me estoy cansando de esto.')
-      utterance.lang = 'es-MX'
-      speechSynthesis.speak(utterance)
-
-    }
-    if (voz === 'armadillo muéstrame la luna' || voz === 'armadillo Muéstrame la luna') {
-      console.log("Estas mostrando un modelo 3D");
-      var es = document.querySelector('#avatar');
-      es.setAttribute("src", 'Assets/luna.glb');
-      es.setAttribute("scale", '.10 .10 .10');
-      el.setAttribute("position", '0 0 0');
-      el.setAttribute(animation, {'property': position,'to': {x: 1, y: 1, z: 1}, 'startEvents': 'startanim001'});
-
-      let utterance = new SpeechSynthesisUtterance('luna a la vista. Aunque no se que tiene que ver con GitHub.')
-      utterance.lang = 'es-MX'
-      speechSynthesis.speak(utterance)
-    }
 
     console.log('Confidence: ' + event.results[0][0].confidence);
   }
@@ -616,4 +582,5 @@ document.getElementById('micro-button').onclick = micro;
     diagnostic.setAttribute("value", 'Ocurrio un error al escucharte: ' + event.error);
   }
 </script>
+
 </html>
